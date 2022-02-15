@@ -49,6 +49,7 @@ public class umbController {
     @GetMapping("/api/books/{bookid}")
     public void deleteBook(@PathVariable Integer bookid) {
         this.books.remove(this.books.get(bookid));
+        System.out.println(this.books);
     }
     @GetMapping("/api/books/{bookid}")
     public void updateBook(@PathVariable Integer bookid, @RequestBody Book book) {
